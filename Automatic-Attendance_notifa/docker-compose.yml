@@ -1,0 +1,17 @@
+version: "3.2"
+
+services:
+
+  attendence:
+    image: zohoattendence:latest
+    build:
+      context: .
+    restart: always
+    entrypoint: python3
+    command: app.py
+    network_mode: host
+    volumes:
+      - ./app.py:/app/app.py
+      - ./config.ini:/app/config.ini
+      - ./geckodriver.log:/app/geckodriver.log
+      - $FIREFOX_PROFILE:/app/profile

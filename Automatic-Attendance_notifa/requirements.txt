@@ -1,0 +1,6 @@
+selenium
+schedule
+geocoder
+quoters
+geckodriver-autoinstaller
+python-dotenv
